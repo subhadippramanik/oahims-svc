@@ -1,0 +1,247 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>HIMs - Object Analyst</title>
+<script language="JavaScript" src="./common/Inputvalidation.js"></script>
+
+<script type="text/javascript">
+	var xmlHttp;
+  	function OpenResponse(){
+		try
+			{    // Firefox, Opera 8.0+, Safari
+			xmlHttp=new XMLHttpRequest();
+			}catch (e){    // Internet Explorer
+			try
+				{
+				xmlHttp=new ActiveXObject("Msxml2.XMLHTTP");
+				} catch (e) {
+				try
+					{
+					xmlHttp=new ActiveXObject("Microsoft.XMLHTTP");
+					}catch (e){
+					alert("Your browser does not support AJAX!");
+					return false;
+				}
+			}
+		}
+	}
+
+	function ajaxFunctionUserID(){
+		OpenResponse();
+    	xmlHttp.onreadystatechange=function()
+      	{
+		  //alert(xmlHttp.readyState);
+		  if(xmlHttp.readyState==4)
+        	{
+        	document.getElementById("msgUsr").innerHTML="&nbsp;&nbsp;Login - <font class='Font8vRed'>" + xmlHttp.responseText + "</font>";
+        	}
+      	} //txtPwd,txtUserId
+    	xmlHttp.open("GET","ChkLogin.asp?type=1&id=" + document.FrmIndex.txtUserId.value,true);
+    	xmlHttp.send(null);
+	}
+
+	function ajaxFunctionPwd(){
+		OpenResponse();
+    	xmlHttp.onreadystatechange=function()
+      	{
+		  //alert(xmlHttp.readyState);
+		  if(xmlHttp.readyState==4)
+        	{
+        	document.getElementById("msgUsr").innerHTML="&nbsp;&nbsp;Login - <font class='Font8vRed'>" + xmlHttp.responseText + "</font>";
+        	}
+      	} //txtPwd,txtUserId
+    	xmlHttp.open("GET","ChkLogin.asp?type=2&id=" + document.FrmIndex.txtPwd.value,true);
+    	xmlHttp.send(null);
+	}
+
+function ValidateForm(){
+	//txtUserId,txtPwd,usrRole
+	var UserId=document.frmIndex.txtUserId.value;
+	if(UserId=="" || UserId.length==0){
+		alert("Please enter User Id to continue....");
+		document.frmIndex.txtUserId.focus();
+		return false;
+	}
+	var Password=document.frmIndex.txtPwd.value;
+	if(Password=="" || Password.length==0){
+		alert("Please enter Password to continue....");
+		document.frmIndex.txtPwd.focus();
+		return false;
+	}
+	var UserRole=document.frmIndex.usrRole.value;
+	if(UserRole=="" || UserRole.length==0){
+		alert("Please select User Role to continue....");
+		document.frmIndex.usrRole.focus();
+		return false;
+	}
+	return true;
+}
+</script>
+<link href="./common/Styles.css" rel="stylesheet" type="text/css" />
+</head>
+<body topmargin="10px"  onLoad="document.frmIndex.txtUserId.focus();">
+<form method="post" name="frmIndex" onSubmit="return ValidateForm();" action="login.jsp">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="center" valign="top">
+      <table width="80%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <!-- <td style="width:10px;background-color:#DCE3DB;"></td>
+          <td style="width:10px;background-color:#EBEBEA;"></td> -->
+          <td style="width:800px;">
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td>
+                  <!-- start quick link -->
+					<table width="100%" border="0" cellspacing="0" cellpadding="0">
+						<tr>
+							<td style="height:56px;width:250px"><img src="images/logo.jpg" width="250px"></td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td style="height:56px;width:200px" align="right"><img src="images/logoc.gif" width="180px"></td>
+						</tr>
+					</table>
+                  <!-- end quick link -->
+                </td>
+              </tr>
+              <tr>
+                <td align="left"><img src="images/header.jpg" width="100%"></td>
+              </tr>
+              <tr>
+                <td align="left" valign="top">
+                  <!-- start content area -->
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td align="left" valign="top" style="width:557px;padding-right:7px;">
+                      <!-- start main content -->
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+						  <tr>
+							<td align="left" class="Font7v" background="images/top.jpg" height="40px" 
+							style="border:1px solid #e5e5e5;">
+                            <!--<td align="left" class="Font7v" height="20px" style="border:1px solid #e5e5e5;">-->
+							 <marquee behavior="scroll" scrolldelay="120">
+                              <font color="#E24939">Register Patient--> Print Patient Card--> View Daily Collection-->
+                              View Doctor-wise Collection--> View Daily Cash book</font>
+                             </marquee>
+							</td>
+						  </tr>
+                          <tr>
+                            <td align="left" valign="top" style="height:410px; padding-top:2px;border:1px solid #e5e5e5;">
+                              <table width="85%" border="0" cellspacing="0" cellpadding="0" height="400px">
+                                <tr>
+                                  <td align="center" style="BORDER-TOP:1px"><img src="images/dash.jpg" height="400px"/></td>
+                                </tr>
+                              </table></td>
+                          </tr>
+                          <tr>
+                            <td align="center" style="height:40px;border:1px solid #e5e5e5;" class="Font7v">
+								Developed & Maintained by OBJECT ANALYST, Kolkata. Copyright 2015-2020.
+                  				All Rights Reserved.
+							</td>
+                          </tr>
+                        </table>
+                      <!-- end main content -->
+                      </td>
+
+                      <td align="left" valign="top">
+                      <!-- start panel content -->
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0" style="width:250px;height:500px;border:1px solid #e5e5e5;">
+                          <tr>
+							<td align="center" class="Font8v"  background="image/top.jpg" height="40px" style="border:0px solid #e5e5e5;">
+							<img src="images/logo_s.jpg" height="20px"/> - by <strong>OBJECT ANALYST</strong>
+							</td>
+							</tr>
+						  	<tr>
+                            	<td align="left" valign="top" style="height:170px" class="Font8v">
+                              	<!-- start about product area -->
+                              	<div align="justify" style="padding-left:5px;padding-right:5px;padding-top:10px">
+								&nbsp;&nbsp;&nbsp;HIMs is a solution
+                                framework that integrates all the different department of any
+                                health provider organization (HPO) to streamline all clinical and
+                                financial operation for automating
+                                manual processes providing higher productivity, minimizing errors
+                                and reducing duplication of work resulting in unlimited benefits
+                                thus improving business processes.
+                                <!-- end  about product area -->
+                              </div></td>
+                         </tr>
+						 <tr>
+							<td align="left" class="Font8vB" background="images/top.jpg" height="25px" 
+							style="border:1px solid #e5e5e5; background-color:#C7DEF4" id="msgUsr">
+								&nbsp;&nbsp;&nbsp;Login :
+							</td>
+						</tr>
+						 <tr>
+                            <td align="left" valign="top" style="height:170px;">
+                            <!-- start jobseekers area -->
+                              <table width="100%" border="0" cellpadding="3" cellspacing="4" bgcolor="#FFFFFF">
+								  <tr class="Font8v">
+									<td align="right" colspan="2" style="height:25px"></td>
+								  </tr>
+								  <tr class="Font8v">
+									<td align="right" valign="top">User Id: </td>
+									<td>
+									   <input name="txtUserId" type="text" class="mandtxtbox" size="15"></td>
+								  </tr>
+								  <tr class="Font8v">
+									<td align="right" valign="top">Password:
+									</td>
+									<td>
+									  <input name="txtPwd" type="password" class="mandtxtbox" size="15"></td>
+								  </tr>
+                                  <tr class="Font8v">
+									<td align="right" valign="top">Role:
+									</td>
+									<td>
+                                    	<select name="usrRole" class="mandtxtbox">
+											<option value="">--Select Role--</option>
+                                        	<option value="2">User</option>
+                                        	<option value="1">Admin</option>
+                                    	</select>
+									</td>
+								  </tr>
+								  <tr class="Font9Boldv">
+									<td>&nbsp;</td>
+									<td>
+									  <input type="submit" name="Submit" value="Login" class="mandtxtbox"></td>
+								  </tr>
+								</table>
+                            </td>
+                         </tr>
+						 <tr>
+							<td align="left" class="Font9v" style="border-bottom:2px solid #e5e5e5;background-color:#C7DEF4">&nbsp;
+
+							</td>
+						</tr>
+						<tr>
+							<td align="left" class="Font7v" style="height:40px;padding-left:2px;padding-right:2px;padding-top:2px">
+								<div align="justify">All confidential data
+								are masked as far as possible. Any resem- blance
+								to any name and numbers is purely coincidental
+								and unintentional.</div>
+							</td>
+						</tr>
+                      </table>
+                      </td>
+					  <td width="5px"></td>
+                    </tr>
+                  </table>
+                  <!-- end content area -->
+                </td>
+              </tr>
+              <tr>
+                <td style="height:25px;background-color:#E5E5E5"></td>
+              </tr>
+            </table>
+          </td>
+          <!-- <td style="width:10px;background-color:#EBEBEA;"></td>
+          <td style="width:10px;background-color:#DCE3DB;"></td> -->
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+</form>
+</body>
+</html>

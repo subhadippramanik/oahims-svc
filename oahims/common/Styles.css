@@ -1,0 +1,217 @@
+A:link
+{
+    TEXT-DECORATION: none;	
+}
+A:hover {
+	TEXT-DECORATION: underline
+}
+.label
+{
+    FONT-FAMILY: Verdana, Tahoma, Arial, Helvetica;
+    FONT-SIZE: 7.5pt;
+    FONT-WEIGHT: normal;
+    COLOR: #FFFFFF
+}
+
+.labelBlack
+{
+    FONT-FAMILY: Verdana, Tahoma, Arial, Helvetica;
+    FONT-SIZE: 7.5pt;
+    FONT-WEIGHT: normal;
+    COLOR: #00000
+}
+
+.iframeControl {
+	scrollbar-3dlight-color:#000000;
+	scrollbar-arrow-color:#000000;
+	scrollbar-track-color:#FFFFFF;
+	scrollbar-darkshadow-color:#333333;
+	scrollbar-face-color:#666666;
+	scrollbar-highlight-color:#999999;
+	scrollbar-shadow-color:#000000
+}
+.Font7v{
+	COLOR: gray; 
+	FONT-FAMILY: Verdana, Arial; 
+	FONT-SIZE: 7pt
+}
+.Font7vB{
+	COLOR: black; 
+	FONT-FAMILY: Verdana, Arial; 
+	FONT-SIZE: 7pt; 
+	FONT-WEIGHT: bold;
+}
+.Font7vBl{
+	COLOR: royalblue; 
+	FONT-FAMILY: Verdana, Arial; 
+	FONT-SIZE: 8pt
+}
+.Font8v {
+	COLOR: #050a4b; 
+	FONT-FAMILY: Verdana, Arial; 
+	FONT-SIZE: 8pt
+}
+.Font8vB {
+	COLOR: #050a4b; 
+	FONT-FAMILY: Verdana, Arial; 
+	FONT-SIZE: 8pt; 
+	FONT-WEIGHT: bold;
+}
+.Font8vB {
+	COLOR: #050a4b; 
+	FONT-FAMILY: Verdana, Arial; 
+	FONT-SIZE: 8pt; 
+	FONT-WEIGHT: bold;
+}
+.Font8vRed {
+	COLOR: #ff0000; 
+	FONT-FAMILY: Verdana, Arial; 
+	FONT-SIZE: 8pt; 
+	FONT-WEIGHT: bold;
+}
+.Font8vYel {
+	COLOR: #00ff00; 
+	FONT-FAMILY: Verdana, Arial; 
+	FONT-SIZE: 8pt; 
+	FONT-WEIGHT: bold;
+}
+.Font9vWB {
+	COLOR: #000000; 
+	FONT-FAMILY: Verdana, Arial; 
+	FONT-SIZE: 9pt;
+	FONT-WEIGHT: bold;
+}
+.Font9vWBh {
+	COLOR: #ffffff; 
+	FONT-FAMILY: Verdana, Arial; 
+	FONT-SIZE: 12pt;
+	FONT-WEIGHT: bold;
+}
+.Font7vW{
+	COLOR: #ffffff; 
+	FONT-FAMILY: Verdana, Arial; 
+	FONT-SIZE: 7pt;
+	FONT-WEIGHT: bold;
+}
+.mandtxtbox {
+	BACKGROUND-COLOR: #f5faff; 
+	BORDER-BOTTOM: gray 1px solid; 
+	BORDER-LEFT: gray 1px solid; 
+	BORDER-RIGHT: gray 1px solid; 
+	BORDER-TOP: gray 1px solid; 
+	COLOR: #052364; 
+	FONT-FAMILY: verdana, arial; 
+	FONT-SIZE: 8pt
+}
+.txtbox {
+	BACKGROUND-COLOR: #f5faff; 
+	BORDER-BOTTOM-WIDTH: 0px; 
+	BORDER-LEFT-WIDTH: 0px; 
+	BORDER-RIGHT-WIDTH: 0px; 
+	BORDER-TOP-WIDTH: 0px; 
+	COLOR: #0a1c64; 
+	FONT-FAMILY: verdana, arial; 
+	FONT-SIZE: 8pt; 
+	FONT-WEIGHT: bold
+}
+
+.title
+{
+    COLOR: #0000ff;
+    FONT-FAMILY: Verdana, Tahoma, Arial, Helvetica;
+    FONT-SIZE: 12pt;
+    FONT-WEIGHT: bold
+}
+.lblhdr
+{
+    BACKGROUND-COLOR: #6699CC;
+    COLOR: #ffffff;
+    FONT-FAMILY: Verdana, Tahoma, Arial, Helvetica;
+    FONT-SIZE: 8pt;
+    FONT-WEIGHT: bold;
+    HEIGHT: 10pt
+}
+.trodd
+{
+    BACKGROUND-COLOR: #f5f5dc;
+    BORDER-BOTTOM: medium none;
+    BORDER-LEFT: medium none;
+    BORDER-RIGHT: medium none;
+    BORDER-TOP: medium none;
+    FONT-FAMILY: Verdana, Tahoma, Arial, Helvetica;
+    FONT-SIZE: 7pt
+}
+.treven
+{
+    BACKGROUND-COLOR: #E9F4BB;
+    COLOR: #000000;
+    FONT-FAMILY: Verdana, Tahoma, Arial, Helvetica;
+    FONT-SIZE: 7pt
+}
+.selected
+{
+    BACKGROUND-COLOR: #DDF7ED;
+    FONT-FAMILY: Verdana, Tahoma, Arial, Helvetica;
+	FONT-SIZE: 7pt
+}
+.tableheader
+{
+	BACKGROUND-COLOR: #A6A6A6;
+    FONT-FAMILY: Verdana, Tahoma, Arial, Helvetica;
+    FONT-SIZE: 8pt;
+	FONT-WEIGHT: bold;
+}
+.pagestyle4 {
+	border-left: solid 1px #B0BEC7;
+	border-right: solid 1px #B0BEC7;
+	border-bottom: solid 1px #B0BEC7;
+	background-Color: #FFFFFF;
+	background-repeat: repeat-y;
+}
+
+.grdback
+{
+    BACKGROUND-COLOR: #D8F1F1; /*E9F4BB*/
+    BORDER-BOTTOM: medium none;
+    BORDER-LEFT: medium none;
+    BORDER-RIGHT: medium none;
+    BORDER-TOP: medium none;
+    COLOR: #000000;
+    FONT-FAMILY: Verdana, Tahoma, Arial, Helvetica;
+    FONT-SIZE: 8pt;
+    FONT-WEIGHT: normal
+}
+
+
+.main {
+width:300px;
+border:1px solid #6699FF;
+}
+
+.month {
+font:bold 12px verdana;
+color:blue;
+height:22px;
+}
+
+.daysofweek {
+background-color:#6699CC;
+font:bold 12px verdana;
+color:white;
+}
+
+.weekdays {
+font-size: 12px;
+font-family:verdana;
+color:black;
+background-color: #FFFFCC;
+padding: 2px;
+}
+.weekend {
+font-size: 12px;
+font-family:verdana;
+color:black;
+background-color: #FF9393;
+padding: 2px;
+}
+
