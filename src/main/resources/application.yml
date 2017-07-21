@@ -1,0 +1,44 @@
+## YAML Template.
+spring:
+  profiles:
+    active: dev
+server:
+  port: 8080
+logging:
+  level:
+    org:
+      springframework:
+        web: INFO
+      hibernate: INFO
+---
+spring:
+  profiles: dev
+  h2:
+    console:
+      enabled: true
+  datasource:
+    initialize: true 
+    platform: local
+  jpa:
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+        use_sql_comments: true
+    database: H2 
+---
+spring:
+  profiles: prod
+  datasource:
+    host: db4free.net
+    port: 3306
+    dbname: sp_mysql
+    username: sql_root_sp1
+    password: eecef9
+    url: jdbc:mysql://${spring.datasource.host}:${spring.datasource.port}/${spring.datasource.dbname}?useSSL=false
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+    hibernate:
+      ddl-auto: update
